@@ -22,7 +22,6 @@ iptables -t nat -A PREROUTING -p tcp --destination-port 80 -j REDIRECT --to-port
 nohup sslstrip -p -l 8844 >/dev/null 2>&1 &
 sslstripPID=$!
 echo "sslstrip by Moxie Marlinspike running..."
-#kill -SIGINT $sslstripPID
 echo -e "\tsslstripPID="$sslstripPID
 
 echo ""
